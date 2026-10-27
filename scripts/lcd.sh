@@ -1,5 +1,8 @@
+#27/10/26 21:01:27 update, new version
+#FIXED: fix right part of tft
+
 DEV=/dev/spidev1.0
-[ -c $DEV ] || {echo "no $DEV";return 1;}
+[ -c $DEV ] || { echo "нет $DEV"; return 1; }
 [ -d /sys/class/gpio/gpio12 ] || echo 12 > /sys/class/gpio/export
 echo out > /sys/class/gpio/gpio12/direction
 cmd() { echo 0 > /sys/class/gpio/gpio12/value; printf "$1" > $DEV; echo 1 > /sys/class/gpio/gpio12/value; }
@@ -8,7 +11,7 @@ init() {
   cmd '\001'; sleep 1
   cmd '\021'; sleep 1
   cmd '\072'; dat '\125'
-  cmd '\066'; dat '\050'
+  cmd '\066'; dat '\000'
   cmd '\051'
 }
 fill() {
@@ -33,7 +36,7 @@ init2() {
   cmd '\305'; dat '\065\076'
   cmd '\307'; dat '\276'
   cmd '\072'; dat '\125'
-  cmd '\066'; dat '\050'
+  cmd '\066'; dat '\000'
   cmd '\261'; dat '\000\033'
   cmd '\046'; dat '\001'
   cmd '\267'; dat '\007'
