@@ -12,7 +12,9 @@ export STAGING_DIR="$SDK/staging_dir"
 
 n then compile
 ```sh
-"$CC" -O3 -static -Wall -Wextra badapple.c -o badapple
+"$CC" -O3 -static -Wall -Wextra badapple5.c -o badapple
 ```
 
 n then send it to router via scp
+
++ copy archive
