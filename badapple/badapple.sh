@@ -2,7 +2,7 @@
 
 ARCHIVE="/overlay/badapple.baf.gz"
 VIDEO="/tmp/badapple.baf"
-PLAYER="/root/badapple2"
+PLAYER="/root/badapple"
 FPS="${1:-30}"
 
 if [ ! -x "$PLAYER" ]; then
