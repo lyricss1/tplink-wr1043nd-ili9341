@@ -8,6 +8,8 @@ SDK="$HOME/owrt-sdk/openwrt-sdk-19.07.10-ar71xx-generic_gcc-7.5.0_musl.Linux-x86
 TC="$SDK/staging_dir/toolchain-mips_24kc_gcc-7.5.0_musl"
 K="$SDK/build_dir/target-mips_24kc_musl/linux-ar71xx_generic/linux-4.14.275"
 export STAGING_DIR="$SDK/staging_dir"
+
+export CC="$HOME/owrt-sdk/openwrt-sdk-19.07.10-ar71xx-generic_gcc-7.5.0_musl.Linux-x86_64/staging_dir/toolchain-mips_24kc_gcc-7.5.0_musl/bin/mips-openwrt-linux-musl-gcc"
 ```
 
 n then compile
