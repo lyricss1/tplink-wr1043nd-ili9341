@@ -6,7 +6,7 @@ different SoC and a different kernel. I just want to show that it can be done
 and tell how I did it on mine.
 
 
-![demo](docs/show.gif)
+![demo](docs/show2.gif)
 
 ## Versions
 
