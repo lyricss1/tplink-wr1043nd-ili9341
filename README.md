@@ -5,6 +5,7 @@ This is not a universal guide. Your router will have different pins, a
 different SoC and a different kernel. I just want to show that it can be done
 and tell how I did it on mine.
 
+
 ![demo](docs/show.gif)
 
 ## Versions
