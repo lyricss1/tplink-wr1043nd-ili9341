@@ -1,6 +1,6 @@
 <div align="center">
 
-# ILI9341 on a router
+# TFT DISPLAY ON A ROUTER
 
 ![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
 ![OpenWrt](https://img.shields.io/badge/OpenWrt-00B5E2?style=for-the-badge&logo=openwrt&logoColor=white)
