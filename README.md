@@ -23,9 +23,9 @@
 
 ## Versions
 
-- **[v2](v2/) (root of this repo, current)** - the display is a real SPI device on the same
+- **[v2] (root of this repo, current)** - the display is a real SPI device on the same
   bus as the flash chip, so it shows up as `/dev/spidev0.1`
-- **[v1](v1/)** - old method, software SPI over the GPIO pins of the LEDs.
+- **[v1](v1.0/)** - old method, software SPI over the GPIO pins of the LEDs.
   Tag `v1.0`.
 
 v1 worked, but it was slow because it used software SPI (bit-banging GPIO from userspace), 
