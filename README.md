@@ -66,11 +66,11 @@ userspace like with any other spidev.
 |---------|----------------------|
 | VCC     | 3.3V                 |
 | GND     | GND                  |
-| SCK     | (flash CLK)          |
-| MOSI    | (flash DI)           |
+| SCK     | Pin 6 (flash CLK)    |
+| MOSI    | Pin 5 (flash SI)     |
 | CS      | GPIO15               |
 | DC      | LED DS5              |
-| RESET   | 3.3v                 |
+| RESET   | 3.3v (VCC)           |
 | LED     | GPIO12               |
 
 ![wiring](docs/finalschem.jpg)
