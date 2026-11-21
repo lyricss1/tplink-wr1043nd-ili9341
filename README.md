@@ -10,13 +10,13 @@ and tell how I did it on mine.
 
 ## Versions
 
-- **v2 (this folder, current)** - the display is a real SPI device on the same
+- **v2 (root of this repo, current)** - the display is a real SPI device on the same
   bus as the flash chip, so it shows up as `/dev/spidev0.1`
 - **[v1](v1/)** - old method, software SPI over the GPIO pins of the LEDs.
   Tag `v1.0`.
 
 v1 worked, but it was slow because it used software SPI (bit-banging GPIO from userspace), 
-requiring the CPU to manually toggle GPIO pins for every bit. It achieved approximately 5 FPS
+requiring the CPU to manually toggle GPIO pins for every bit. It achieved approximately 5 FPS.
 With v2, I use hardware SPI through the routers flash SPI bus, exposing a second SPI device 
 (/dev/spidev0.1) for the TFT. This eliminates software bit-banging and significantly reduces CPU overhead.
 With v2 I get about 30 FPS!
@@ -44,7 +44,7 @@ userspace like with any other spidev.
 ## Hardware
 
 - TP-Link TL-WR1043ND v2.1
-- ILI9341 SPI display, TODO size, TODO module name/seller
+- ILI9341 SPI display, 2.8 size
 - thin wires, soldering iron, HANDS
 
 ### Wiring
