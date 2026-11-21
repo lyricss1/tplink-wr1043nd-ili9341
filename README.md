@@ -1,12 +1,25 @@
-# ILI9341 on TP-Link TL-WR1043ND v2.1 (OpenWrt)
+<div align="center">
 
-I connected an ILI9341 TFT to an old TL-WR1043ND v2.1 running OpenWrt 19.07.10.
-This is not a universal guide. Your router will have different pins, a
-different SoC and a different kernel. I just want to show that it can be done
-and tell how I did it on mine.
+# ILI9341 on a router
 
+![C](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+![OpenWrt](https://img.shields.io/badge/OpenWrt-00B5E2?style=for-the-badge&logo=openwrt&logoColor=white)
+![Linux Kernel](https://img.shields.io/badge/Linux%20Kernel-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+![TP-Link](https://img.shields.io/badge/TP--Link-4ACBD6?style=for-the-badge&logo=tplink&logoColor=white)
+![Raspberry Pi](https://img.shields.io/badge/Built%20on-Raspberry%20Pi-C51A4A?style=for-the-badge&logo=raspberrypi&logoColor=white)
+![Shell](https://img.shields.io/badge/Shell-4EAA25?style=for-the-badge&logo=gnubash&logoColor=white)
+![License](https://img.shields.io/github/license/lyricss1/tplink-wr1043nd-ili9341?style=for-the-badge)
+![Release](https://img.shields.io/github/v/release/lyricss1/tplink-wr1043nd-ili9341?style=for-the-badge)
 
-![demo](docs/show2.gif)
+### **I connected a screen to an old router with no extra boards, using a driver I wrote myself**
+
+<sub>TP-Link TL-WR1043ND v2.1 · OpenWrt 19.07.10 (ar71xx, kernel 4.14.275) · ILI9341 2.8" SPI TFT</sub>
+
+<img src="docs/show2.gif" width="580" alt="demo">
+
+<sub>This is not a universal guide. Your router will have different pins, a different SoC and a different kernel.<br>I just want to show that it can be done and tell how I did it on mine.</sub>
+
+</div>
 
 ## Versions
 
@@ -114,11 +127,9 @@ Side effect: after this the LEDs of the router stop working.
 - TODO: Occasional frame glitches at higher SPI speeds; aiming for a stable,
   consistent 20–30 FPS without visual artifacts
 
-## Warning
-
-You are soldering to the board of your router. You can kill it.
-I take no responsibility, do it at your own risk. Make a backup of the
-firmware first.
+> [!WARNING]
+> You are soldering to the board of your router. You can kill it.
+> Make a backup of the firmware first. Do it at your own risk.
 
 by lyricss1
 
