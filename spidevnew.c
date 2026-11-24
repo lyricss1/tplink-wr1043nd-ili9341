@@ -25,6 +25,10 @@ static u16 on;
 
 static int __init t_init(void){
 	int r;
+	if(cs<0||cs>255){
+		pr_err("tft_spi: bad chip_select: %d\n",cs);
+		return -EINVAL;
+	}
 	m=spi_busnum_to_master(b);
 	if(!m){
 		pr_err("tft_spi: no spi bus %d\n",b);
