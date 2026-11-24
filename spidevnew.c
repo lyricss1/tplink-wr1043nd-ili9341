@@ -1,3 +1,5 @@
+//#define pr_fmt(fmt) KBUILD_MODNAME ": " fmt
+
 // spidevnew.c - adds /dev/spidev0.1 on the SPI flash bus (ath79, 4.14 )
 // CS = soft GPIO, flash CS0 isnt tuoched
 // insmod spidevnew.ko [bus=0] [chip_select=1] [cs_gpio=15] [speed=10000000] or just insmod spidevnew.ko
@@ -74,6 +76,13 @@ static void __exit t_exit(void){
 	pr_info("tft_spi: bye\n");
 }
 
+
+MODULE_PARM_DESC(bus, "SPI bus num (def 0)");
+MODULE_PARM_DESC(chip_select, "Chip sel index (def 1)");
+MODULE_PARM_DESC(cs_gpio, "GPIO num soft CS (def 15)");
+MODULE_PARM_DESC(speed, "max SPI Hz (def 10000000)");
+MODULE_AUTHOR("lyricss");
+MODULE_VERSION("2.1");
 
 module_init(t_init);
 module_exit(t_exit);
